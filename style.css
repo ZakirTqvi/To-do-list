@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-box {
+    background-color: rgb(214, 222, 212);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+#row1 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.3rem;
+}
