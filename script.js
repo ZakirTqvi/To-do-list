@@ -4,7 +4,6 @@ const taskList = document.getElementById('taskList')
 
 addBtn.addEventListener('click', ()=>{
     const inputValue = inputFld.value.trim()
-    console.log(inputValue)
    
     if(inputValue.trim() != "") {
 
@@ -15,6 +14,7 @@ addBtn.addEventListener('click', ()=>{
         // create a 'Mark complete' button
         const completeBtn = document.createElement('button');
         completeBtn.textContent = 'Complete';
+        completeBtn.classList.add('complete-btn')
         completeBtn.addEventListener('click', ()=> {
             listItem.style.textDecoration = 'line-through'
         });
@@ -22,12 +22,27 @@ addBtn.addEventListener('click', ()=>{
         // crate a delete button
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete'
+        deleteBtn.classList.add('delete-btn')
         deleteBtn.addEventListener('click', ()=> {
             taskList.removeChild(listItem);
         })
 
+        // create edit button
+        const editBtn = document.createElement('button')
+        editBtn.textContent = 'Edit'
+        editBtn.classList.add('edit-btn')
+        editBtn.addEventListener('click', ()=> {
+            const currrentText = listItem.firstChild.textContent;
+            console.log(currrentText)
+            const newText = prompt('Edit your to-do item:', currrentText)
+            if(newText) {
+                listItem.firstChild.textContent = newText;
+            }
+        })
+
         listItem.appendChild(completeBtn)
         listItem.appendChild(deleteBtn)
+        listItem.appendChild(editBtn)
 
         taskList.appendChild(listItem)
         inputFld.value = '';

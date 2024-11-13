@@ -32,3 +32,26 @@
     text-decoration: line-through;
     color: gray;
 }
+
+.complete-btn,.delete-btn, .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.complete-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: rgb(241, 54, 7);
+}
+
+.edit-btn {
+    background-color: rgb(20, 225, 225);
+}
