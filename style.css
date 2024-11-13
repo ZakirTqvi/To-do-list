@@ -27,6 +27,10 @@
    list-style: none;
    font-weight: bolder; 
    text-transform: capitalize;
+   background-color: rgb(208, 218, 218);
+   border: 1px solid rgb(176, 183, 186);
+   padding: 0.4rem 1rem;
+   border-radius: 0.5rem;
 }
 
 .completed {
@@ -55,4 +59,26 @@
 
 .edit-btn {
     background-color: rgb(20, 225, 225);
+}
+input[type="text"] {
+    width: 100%;          /* Full width */
+    padding: 10px;        /* Padding inside the input */
+    margin: 1rem 0;        /* Margin outside the input */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    font-size: 0.9rem;      /* Font size */
+    border: 0.1rem solid #ccc; /* Border */
+    border-radius: 0.6rem;   /* Rounded corners */
+    outline: none;        /* Removes outline on focus */
+  }
+  input[type="button"] {
+    padding: 0.5rem;                
+    box-sizing: border-box; 
+    font-size: 0.9rem;      
+/* Rounded corners */
+    outline: none;        
+  }
+@media(max-width: 768px) {
+    .inner-box,.container {
+        background-color: rgb(193, 190, 180);
+    }
 }
